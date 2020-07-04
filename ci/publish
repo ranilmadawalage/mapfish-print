@@ -3,6 +3,7 @@
 import os
 import re
 import subprocess
+import sys
 
 
 def publish(docker_version):
@@ -15,7 +16,7 @@ def publish(docker_version):
 def main():
     if os.environ.get("GITHUB_EVENT_NAME") == "pull_request":
         print("Not deploying image for pull requests")
-        exit(0)
+        sys.exit(0)
 
     branch_match = re.match("^refs/heads/(.*)$", os.environ["GITHUB_REF"])
     tag_match = re.match("^refs/tags/(.*)$", os.environ["GITHUB_REF"])
