@@ -104,14 +104,6 @@ public interface JobQueue {
     void cancelOld(long startTimeOut, long abandonTimeout, String message);
 
     /**
-     * Start the next [N] number of jobs at once.
-     *
-     * @param number the number of jobs to start
-     * @return the jobs that were just started
-     */
-    List<? extends PrintJobStatus> start(int number);
-
-    /**
      * Get the jobs that are marked as "CANCELING" and must be cancelled.
      */
     List<? extends PrintJobStatus> toCancel();

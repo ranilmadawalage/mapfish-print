@@ -1,7 +1,6 @@
 package org.mapfish.print.servlet.job.impl.hibernate;
 
 import org.hibernate.LockMode;
-import org.hibernate.PessimisticLockException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.net.URI;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nullable;
 import javax.annotation.PostConstruct;
@@ -87,7 +85,7 @@ public class PrintJobDao {
         if (lock) {
             //LOCK means SELECT FOR UPDATE which prevents these records to be pulled by different
             // instances
-            query.setLockMode("pj", LockMode.PESSIMISTIC_READ);
+            query.setLockMode("pj", LockMode.PESSIMISTIC_WRITE);
         } else {
             query.setReadOnly(true);  // make sure the object is not updated if there is no lock
         }
@@ -210,33 +208,6 @@ public class PrintJobDao {
         delete.where(builder.and(builder.isNotNull(root.get("lastCheckTime")),
                                  builder.lessThan(root.get("lastCheckTime"), checkTimeThreshold)));
         return getSession().createQuery(delete).executeUpdate();
-    }
-
-    /**
-     * Poll for the next N waiting jobs in line.
-     *
-     * @param size maximum amount of jobs to poll for
-     * @return up to "size" jobs
-     */
-    public final List<PrintJobStatusExtImpl> poll(final int size) {
-        final CriteriaBuilder builder = getSession().getCriteriaBuilder();
-        final CriteriaQuery<PrintJobStatusExtImpl> criteria =
-                builder.createQuery(PrintJobStatusExtImpl.class);
-        final Root<PrintJobStatusExtImpl> root = criteria.from(PrintJobStatusExtImpl.class);
-        root.alias("pj");
-        criteria.where(builder.equal(root.get("status"), PrintJobStatus.Status.WAITING));
-        criteria.orderBy(builder.asc(root.get("entry").get("startTime")));
-        final Query<PrintJobStatusExtImpl> query = getSession().createQuery(criteria);
-        query.setMaxResults(size);
-        // LOCK but don't wait for release (since this is run continuously
-        // anyway, no wait prevents deadlock)
-        query.setLockMode("pj", LockMode.UPGRADE_NOWAIT);
-        try {
-            return query.getResultList();
-        } catch (PessimisticLockException ex) {
-            // Another process was polling at the same time. We can ignore this error
-            return Collections.emptyList();
-        }
     }
 
     /**

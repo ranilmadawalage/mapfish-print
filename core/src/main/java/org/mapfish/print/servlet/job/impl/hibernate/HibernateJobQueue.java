@@ -140,6 +140,7 @@ public class HibernateJobQueue implements JobQueue {
         this.dao.save(record);
     }
 
+    @Transactional
     @Override
     public final synchronized void start(final String referenceId) throws NoSuchReferenceException {
         PrintJobStatusExtImpl record = this.dao.get(referenceId, true);
@@ -149,6 +150,8 @@ public class HibernateJobQueue implements JobQueue {
         record.setStatus(PrintJobStatus.Status.RUNNING);
         record.setWaitingTime(0);
         this.dao.save(record);
+        this.dao.getSession().flush();
+        this.dao.getSession().evict(record);
     }
 
     @Override
