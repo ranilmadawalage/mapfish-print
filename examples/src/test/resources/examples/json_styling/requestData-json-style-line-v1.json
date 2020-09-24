@@ -1,0 +1,23 @@
+{
+  "attributes": {
+    "map": {
+      "center": [
+        -8233518.5005945,
+        4980320.4059228
+      ],
+      "dpi": 128,
+      "layers": [
+        {
+          "geoJson": {},
+          "style": {},
+          "type": "geojson"
+        }
+      ],
+      "projection": "EPSG:3857",
+      "rotation": 0,
+      "scale": 100000
+    }
+  },
+  "layout": "A4 landscape",
+  "outputFormat": "pdf"
+}

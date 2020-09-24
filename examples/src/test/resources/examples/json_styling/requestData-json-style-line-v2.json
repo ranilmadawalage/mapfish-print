@@ -1,0 +1,62 @@
+{
+  "attributes": {
+    "map": {
+      "center": [
+        0,
+        0
+      ],
+      "dpi": 128,
+      "layers": [
+        {
+          "geoJson": {
+            "type": "FeatureCollection",
+            "features": [
+              {
+                "type": "Feature",
+                "properties": {
+                  "type": "join-round"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      -800,
+                      100
+                    ],
+                    [
+                      -700,
+                      800
+                    ],
+                    [
+                      -600,
+                      100
+                    ]
+                  ]
+                }
+              }
+            ]
+          },
+          "style": {
+            "version": "2",
+            "[type = 'join-round']": {
+              "symbolizers": [
+                {
+                  "strokeDashstyle": "solid",
+                  "strokeLinejoin": "round",
+                  "strokeWidth": 10,
+                  "type": "line"
+                }
+              ]
+            }
+          },
+          "type": "Vector"
+        }
+      ],
+      "projection": "EPSG:3857",
+      "rotation": 0,
+      "scale": 1000
+    }
+  },
+  "layout": "A4 landscape",
+  "outputFormat": "pdf"
+}
