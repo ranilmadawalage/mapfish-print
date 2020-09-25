@@ -284,7 +284,7 @@ public class ExamplesTest {
                             File expectedOutputDir = new File(example, "expected_output");
                             File expectedOutput =
                                     getExpectedOutput(outputFormat, requestFile, expectedOutputDir);
-                            LOGGER.warn("Run example '{}' ({}) - {}", example.getName(), requestFile.getName(), ExpectedOutput);
+                            LOGGER.warn("Run example '{}' ({}) - {}", example.getName(), requestFile.getName(), expectedOutput);
                             if (!expectedOutput.exists()) {
                                 errors.put(
                                         example.getName() + " (" + requestFile.getName() + ")",
