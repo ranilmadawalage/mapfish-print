@@ -129,6 +129,29 @@
               {
                 "type": "Feature",
                 "properties": {
+                  "_type": "none"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      -700,
+                      -500
+                    ],
+                    [
+                      -300,
+                      -100
+                    ],
+                    [
+                      -200,
+                      -500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
                   "_type": "cap-butt"
                 },
                 "geometry": {
@@ -257,7 +280,7 @@
             "[_type = 'cap-butt']": {
               "symbizers": [
                 {
-                  "strokeColor":"blue",
+                  "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
                   "strokeLinecap": "butt",
@@ -268,7 +291,7 @@
             "[_type = 'cap-round']": {
               "symbizers": [
                 {
-                  "strokeColor":"blue",
+                  "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
                   "strokeLinecap": "round",
@@ -279,10 +302,18 @@
             "[_type = 'cap-square']": {
               "symbizers": [
                 {
-                  "strokeColor":"blue",
+                  "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
                   "strokeLinecap": "square",
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'none']": {
+              "symbizers": [
+                {
+                  "strokeColor":"gray",
                   "strokeWidth": 20
                 }
               ]
