@@ -39,7 +39,7 @@ import javax.media.jai.iterator.RandomIterFactory;
 public final class ImageSimilarity {
     private static final Logger LOGGER = LoggerFactory.getLogger(ImageSimilarity.class);
 
-    private static final boolean GENERATE_IN_SOURCE = true;
+    private static final boolean GENERATE_IN_SOURCE = false;
 
     private final BufferedImage expectedImage;
     private final BufferedImage maskImage;
