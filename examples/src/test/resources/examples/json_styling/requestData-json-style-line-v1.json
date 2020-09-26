@@ -129,6 +129,29 @@
               {
                 "type": "Feature",
                 "properties": {
+                  "type": "none"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      -700,
+                      -500
+                    ],
+                    [
+                      -600,
+                      -100
+                    ],
+                    [
+                      -500,
+                      -500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
                   "type": "cap-butt"
                 },
                 "geometry": {
@@ -236,24 +259,28 @@
                   "strokeWidth": 20
             },
             "cap-butt": {
-                  "strokeColor":"blue",
+                  "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
                   "strokeLinecap": "butt",
                   "strokeWidth": 20
             },
             "cap-round": {
-                  "strokeColor":"blue",
+                  "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
                   "strokeLinecap": "round",
                   "strokeWidth": 20
             },
             "cap-square": {
-                  "strokeColor":"blue",
+                  "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
                   "strokeLinecap": "square",
+                  "strokeWidth": 20
+            },
+            "none": {
+                  "strokeColor":"grey",
                   "strokeWidth": 20
             }
           },
