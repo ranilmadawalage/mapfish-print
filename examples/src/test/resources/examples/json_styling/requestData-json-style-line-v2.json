@@ -14,22 +14,183 @@
               {
                 "type": "Feature",
                 "properties": {
-                  "type": "join-round"
+                  "_type": "join-miter"
                 },
                 "geometry": {
                   "type": "LineString",
                   "coordinates": [
                     [
-                      -800,
-                      100
-                    ],
-                    [
                       -700,
-                      800
+                      500
                     ],
                     [
                       -600,
                       100
+                    ],
+                    [
+                      -500,
+                      500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "_type": "join-round"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      -400,
+                      500
+                    ],
+                    [
+                      -300,
+                      100
+                    ],
+                    [
+                      -200,
+                      500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "_type": "join-bevel"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      -100,
+                      500
+                    ],
+                    [
+                      0,
+                      100
+                    ],
+                    [
+                      100,
+                      500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "_type": "join-miter-clip"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      200,
+                      500
+                    ],
+                    [
+                      300,
+                      100
+                    ],
+                    [
+                      400,
+                      500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "_type": "join-arcs"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      500,
+                      500
+                    ],
+                    [
+                      600,
+                      100
+                    ],
+                    [
+                      700,
+                      500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "_type": "cap-butt"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      -400,
+                      -500
+                    ],
+                    [
+                      -300,
+                      -100
+                    ],
+                    [
+                      -200,
+                      -500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "_type": "cap-round"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      -100,
+                      -500
+                    ],
+                    [
+                      0,
+                      -100
+                    ],
+                    [
+                      100,
+                      -500
+                    ]
+                  ]
+                }
+              },
+              {
+                "type": "Feature",
+                "properties": {
+                  "_type": "cap-square"
+                },
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                    [
+                      200,
+                      -500
+                    ],
+                    [
+                      300,
+                      -100
+                    ],
+                    [
+                      400,
+                      -500
                     ]
                   ]
                 }
@@ -38,23 +199,101 @@
           },
           "style": {
             "version": "2",
-            "[type = 'join-round']": {
-              "symbolizers": [
+            "[_type = 'join-miter']": {
+              "symbizers": [
                 {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
+                  "strokeDashstyle": "solid",
+                  "strokeLinejoin": "miter",
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'join-round']": {
+              "symbizers": [
+                {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
                   "strokeDashstyle": "solid",
                   "strokeLinejoin": "round",
-                  "strokeWidth": 10,
-                  "type": "line"
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'join-bevel']": {
+              "symbizers": [
+                {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
+                  "strokeDashstyle": "solid",
+                  "strokeLinejoin": "bevel",
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'join-miter-clip']": {
+              "symbizers": [
+                {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
+                  "strokeDashstyle": "solid",
+                  "strokeLinejoin": "miter-clip",
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'join-arcs']": {
+              "symbizers": [
+                {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
+                  "strokeDashstyle": "solid",
+                  "strokeLinejoin": "arcs",
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'cap-butt']": {
+              "symbizers": [
+                {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
+                  "strokeDashstyle": "solid",
+                  "strokeLinecap": "butt",
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'cap-round']": {
+              "symbizers": [
+                {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
+                  "strokeDashstyle": "solid",
+                  "strokeLinecap": "round",
+                  "strokeWidth": 20
+                }
+              ]
+            },
+            "[_type = 'cap-square']": {
+              "symbizers": [
+                {
+                  "strokeColor":"blue",
+                  "strokeOpacity":1,
+                  "strokeDashstyle": "solid",
+                  "strokeLinecap": "square",
+                  "strokeWidth": 20
                 }
               ]
             }
           },
-          "type": "Vector"
+          "type": "geojson"
         }
       ],
       "projection": "EPSG:3857",
       "rotation": 0,
-      "scale": 1000000
+      "scale": 10000
     }
   },
   "layout": "A4 landscape",
