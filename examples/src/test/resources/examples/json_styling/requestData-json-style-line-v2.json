@@ -225,6 +225,7 @@
             "[_type = 'join-miter']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"blue",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -236,6 +237,7 @@
             "[_type = 'join-round']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"blue",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -247,6 +249,7 @@
             "[_type = 'join-bevel']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"blue",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -258,6 +261,7 @@
             "[_type = 'join-miter-clip']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"blue",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -269,6 +273,7 @@
             "[_type = 'join-arcs']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"blue",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -280,6 +285,7 @@
             "[_type = 'cap-butt']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -291,6 +297,7 @@
             "[_type = 'cap-round']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -302,6 +309,7 @@
             "[_type = 'cap-square']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"green",
                   "strokeOpacity":1,
                   "strokeDashstyle": "solid",
@@ -313,6 +321,7 @@
             "[_type = 'none']": {
               "symbolizers": [
                 {
+                  "type": "line",
                   "strokeColor":"gray",
                   "strokeWidth": 20
                 }
