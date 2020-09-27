@@ -109,7 +109,7 @@ import static org.mapfish.print.map.style.json.MapfishJsonStyleVersion1.DEFAULT_
  *       "strokeLinejoin": "round"
  *       "strokeDashstyle": "dot"
  *     }, {
- *       "type" : "line",
+ *       "type": "line",
  *       "strokeColor": "${val1}",
  *       "strokeOpacity": 1,
  *       "strokeWidth": 5,
