@@ -704,7 +704,7 @@ public final class JsonStyleParserHelper {
             stroke.setDashArray(dashArray);
             Expression dashOffset = parseExpression(null, styleJson, JSON_STROKE_DASHOFFSET,
                 Function.identity());
-            stroke.setDashOffset(dashOffset)
+            stroke.setDashOffset(dashOffset);
         }
         // graphic fill
         // graphic stroke
