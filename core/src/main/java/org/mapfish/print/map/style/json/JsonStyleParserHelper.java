@@ -95,6 +95,7 @@ public final class JsonStyleParserHelper {
     static final String JSON_STROKE_OPACITY = "strokeOpacity";
     static final String JSON_STROKE_WIDTH = "strokeWidth";
     static final String JSON_STROKE_DASHSTYLE = "strokeDashstyle";
+    static final String JSON_STROKE_DASHOFFSET = "strokeDashoffset";
     static final String JSON_STROKE_LINECAP = "strokeLinecap";
     static final String JSON_STROKE_LINEJOIN = "strokeLinejoin";
     static final String JSON_FILL_OPACITY = "fillOpacity";
@@ -608,6 +609,7 @@ public final class JsonStyleParserHelper {
     private Fill addFill(final String fillColor, final String fillOpacity) {
         final Expression finalFillColor = parseProperty(fillColor, this::toColorExpression);
         final Expression opacity = parseProperty(fillOpacity, Double::parseDouble);
+        // setGraphicFill
         return this.styleBuilder.createFill(finalFillColor, opacity);
     }
 
@@ -700,7 +702,12 @@ public final class JsonStyleParserHelper {
         stroke.setLineJoin(lineJoin);
         if (!dashArray.isEmpty()) {
             stroke.setDashArray(dashArray);
+            Expression dashOffset = parseExpression(null, styleJson, JSON_STROKE_DASHOFFSET,
+                Function.identity());
+            stroke.setDashOffset(dashOffset)
         }
+        // graphic fill
+        // graphic stroke
         return stroke;
     }
 
