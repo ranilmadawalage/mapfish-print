@@ -224,64 +224,48 @@
             "styleProperty": "type",
             "version": "1",
             "join-miter": {
-                  "strokeColor":"blue",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinejoin": "miter",
-                  "strokeWidth": 20
+              "strokeColor": "blue",
+              "strokeLinejoin": "miter",
+              "strokeWidth": 20
             },
             "join-round": {
-                  "strokeColor":"blue",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinejoin": "round",
-                  "strokeWidth": 20
+              "strokeColor": "blue",
+              "strokeLinejoin": "round",
+              "strokeWidth": 20
             },
             "join-bevel": {
-                  "strokeColor":"blue",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinejoin": "bevel",
-                  "strokeWidth": 20
+              "strokeColor": "blue",
+              "strokeLinejoin": "bevel",
+              "strokeWidth": 20
             },
             "join-miter-clip": {
-                  "strokeColor":"blue",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinejoin": "miter-clip",
-                  "strokeWidth": 20
+              "strokeColor": "blue",
+              "strokeLinejoin": "miter-clip",
+              "strokeWidth": 20
             },
             "join-arcs": {
-                  "strokeColor":"blue",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinejoin": "arcs",
-                  "strokeWidth": 20
+              "strokeColor": "blue",
+              "strokeLinejoin": "arcs",
+              "strokeWidth": 20
             },
             "cap-butt": {
-                  "strokeColor":"green",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinecap": "butt",
-                  "strokeWidth": 20
+              "strokeColor": "green",
+              "strokeLinecap": "butt",
+              "strokeWidth": 20
             },
             "cap-round": {
-                  "strokeColor":"green",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinecap": "round",
-                  "strokeWidth": 20
+              "strokeColor": "green",
+              "strokeLinecap": "round",
+              "strokeWidth": 20
             },
             "cap-square": {
-                  "strokeColor":"green",
-                  "strokeOpacity":1,
-                  "strokeDashstyle": "solid",
-                  "strokeLinecap": "square",
-                  "strokeWidth": 20
+              "strokeColor": "green",
+              "strokeLinecap": "square",
+              "strokeWidth": 20
             },
             "none": {
-                  "strokeColor":"gray",
-                  "strokeWidth": 20
+              "strokeColor": "gray",
+              "strokeWidth": 20
             }
           },
           "type": "geojson"
