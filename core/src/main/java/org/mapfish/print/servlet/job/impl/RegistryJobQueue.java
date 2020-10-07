@@ -299,11 +299,6 @@ public class RegistryJobQueue implements JobQueue {
     }
 
     @Override
-    public final List<? extends PrintJobStatus> start(final int number) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
     public final List<? extends PrintJobStatus> toCancel() {
         throw new UnsupportedOperationException();
     }
